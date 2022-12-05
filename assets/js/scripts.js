@@ -12,6 +12,21 @@
 
 let expiry; //global variable to store number of days for cookie expiry value
 
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 function daysCheck(){
     let days = document.getElementById('expiry').value;
     let daysResp = document.getElementById('daysResp');
@@ -72,4 +87,27 @@ function sectionTwoOut(){
     setCookie(email.id, email.value, expiry);
     setCookie(age.id, age.value, expiry);
     setCookie(phone.id, phone.value, expiry);
+    let sect2 = document.getElementById('second_data');
+    sect2.style.transform = "translateX(-150%)";
+    sect2.style.opacity = "0%";
+    setTimeout(function (){
+        sect2.classList.add('d-none');
+        sectionThreeIn();
+    }, 200)
+}
+
+function sectionThreeIn(){
+    let sect3 = document.getElementById('pic_section');
+    sect3.classList.remove('d-none');
+    setTimeout(function (){
+        sect3.style.opacity = "100%"
+        sect3.style.transform = "translateX(0%)";
+    }, 200);
+
+    let imgSrc = localStorage.getItem('img');
+    let name = getCookie('name');
+    document.getElementById('img-sect').innerHTML = `<img src="${imgSrc}" alt="profile_image" id="profile-img">`;
+    document.getElementById('name-sect').innerHTML = `<h3>${name}</h3>`;
+
+
 }

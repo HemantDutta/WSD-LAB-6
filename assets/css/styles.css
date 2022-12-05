@@ -45,3 +45,14 @@ body{
     align-items: flex-start;
     justify-content: center;
 }
+
+#pic_section{
+    margin-top: 10em;
+    text-align: center;
+    background-color: #495579;
+    padding: 40px;
+    border-radius: 40px;
+    transition: all 0.8s ease;
+    transform: translateX(200%);
+    opacity: 0%;
+}
