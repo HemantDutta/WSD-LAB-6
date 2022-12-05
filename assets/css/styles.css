@@ -1,5 +1,6 @@
 body{
     background-color: #251749;
+    transition: all 0.4s ease;
 }
 
 .top-sect h1 {

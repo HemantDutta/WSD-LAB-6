@@ -63,6 +63,11 @@ function sectionTwoOut(){
     let email = document.getElementById('email');
     let age = document.getElementById('age');
     let phone = document.getElementById('phone');
+    let color = document.getElementById('color').value;
+    let file = document.getElementById('img');
+    localStorage.setItem('img', file.value);
+    document.getElementById('body').style.backgroundColor = color;
+    sessionStorage.setItem('bg-color', color);
     setCookie(name.id, name.value, expiry);
     setCookie(email.id, email.value, expiry);
     setCookie(age.id, age.value, expiry);
