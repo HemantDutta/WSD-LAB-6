@@ -107,7 +107,7 @@ function sectionThreeIn(){
     let imgSrc = localStorage.getItem('img');
     let name = getCookie('name');
     document.getElementById('img-sect').innerHTML = `<img src="${imgSrc}" alt="profile_image" id="profile-img">`;
-    document.getElementById('name-sect').innerHTML = `<h3>${name}</h3>`;
+    document.getElementById('name-sect').innerHTML = `<h3 class="text-light">${name}</h3>`;
 
 
 }
