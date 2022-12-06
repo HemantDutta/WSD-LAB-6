@@ -56,3 +56,10 @@ body{
     transform: translateX(200%);
     opacity: 0%;
 }
+
+#pImg{
+    object-fit: cover;
+    max-width: 50%;
+    border-radius: 20px;
+    margin-bottom: 2em;
+}

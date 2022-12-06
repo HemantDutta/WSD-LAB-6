@@ -74,15 +74,19 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function sectionTwoOut(){
+
+
     let name = document.getElementById('name');
     let email = document.getElementById('email');
     let age = document.getElementById('age');
     let phone = document.getElementById('phone');
     let color = document.getElementById('color').value;
-    let file = document.getElementById('img');
-    localStorage.setItem('img', file.value);
+
+    //Background and Session Storage
     document.getElementById('body').style.backgroundColor = color;
     sessionStorage.setItem('bg-color', color);
+
+    //Cookie Storage
     setCookie(name.id, name.value, expiry);
     setCookie(email.id, email.value, expiry);
     setCookie(age.id, age.value, expiry);
@@ -96,6 +100,15 @@ function sectionTwoOut(){
     }, 200)
 }
 
+let img = document.getElementById('img');
+img.onchange = evt => {
+    const [file] = img.files;
+    if(file) {
+        document.getElementById('pImg').src = URL.createObjectURL(file);
+    }
+}
+
+
 function sectionThreeIn(){
     let sect3 = document.getElementById('pic_section');
     sect3.classList.remove('d-none');
@@ -104,9 +117,8 @@ function sectionThreeIn(){
         sect3.style.transform = "translateX(0%)";
     }, 200);
 
-    let imgSrc = localStorage.getItem('img');
+    let imgSrc = localStorage.getItem('fileData');
     let name = getCookie('name');
-    document.getElementById('img-sect').innerHTML = `<img src="${imgSrc}" alt="profile_image" id="profile-img">`;
     document.getElementById('name-sect').innerHTML = `<h3 class="text-light">${name}</h3>`;
 
 
