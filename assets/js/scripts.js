@@ -10,6 +10,19 @@
 //     h1.style.removeProperty('-webkit-text-fill-color');
 // }
 
+
+function loadAnimations(){
+    let nav = document.getElementById('top-head');
+    nav.style.transform = "translateY(0%)";
+    nav.style.opacity = "100%"
+    let form = document.getElementById('first_expiry');
+    form.style.transform = "translateY(0%)";
+    form.style.opacity = "100%"
+    let footer = document.getElementById('footer');
+    footer.style.transform = "translateY(0%)";
+    footer.style.opacity = "100%"
+}
+
 let expiry; //global variable to store number of days for cookie expiry value
 
 function getCookie(cname) {
