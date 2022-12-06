@@ -13,7 +13,7 @@
     <div class="top-sect text-center w-100">
         <h1 class="text-uppercase font-weight-bold text-dark" id="top-head">Javascript Cookies</h1>
     </div>
-    <div id="first_expiry" class="first_expiry w-75 mb-5">
+    <div id="first_expiry" class="first_expiry w-75" style="margin-bottom: 10em;">
         <h3 class="text-light">How long is your stay on our website? 😊</h3>
         <div class="input-fields d-flex flex-column align-items-center">
             <input type="number" name="expiry" id="expiry" onkeyup="daysCheck()" placeholder="no. of days...">
@@ -21,7 +21,7 @@
             <button class="btn btn-outline-light rounded-pill mt-4" id="expiryBtn" disabled onclick="sectionOneOut()">Confirm</button>
         </div>
     </div>
-    <div id="second_data" class="d-none w-75 mb-5">
+    <div id="second_data" class="d-none w-75" style="margin-bottom: 10em;">
         <h3 class="text-light">Tell us about yourself 🕶</h3>
         <div class="input-form mt-3">
             <form action="">
@@ -80,7 +80,13 @@
         </div>
         <div id="name-sect"></div>
         <div class="cMan mt-4">
-            <button class="btn btn-outline-light rounded-pill">Remove Cookies</button>
+            <h4 class="text-light">Remove Cookies</h4>
+        </div>
+        <div class="rmBtns d-none d-flex justify-content-around mt-4" id="rmBtns">
+            <button class="btn btn-outline-light rounded-pill">Name</button>
+            <button class="btn btn-outline-light rounded-pill">Email</button>
+            <button class="btn btn-outline-light rounded-pill">Age</button>
+            <button class="btn btn-outline-light rounded-pill">Phone</button>
         </div>
     </div>
     <div class="me text-center" id="footer">
