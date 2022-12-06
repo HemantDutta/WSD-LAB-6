@@ -52,6 +52,7 @@ body{
 
 #pic_section{
     margin-top: 10em;
+    margin-bottom: 10em;
     text-align: center;
     background-color: #495579;
     padding: 40px;
@@ -66,6 +67,7 @@ body{
     max-width: 50%;
     border-radius: 20px;
     margin-bottom: 2em;
+    max-height: 1000px;
 }
 
 .me{
