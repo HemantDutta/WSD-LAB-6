@@ -183,6 +183,12 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function deleteCookie(value){
+    document.cookie = `${value}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    document.getElementById('cookieResp').classList.remove('d-none');
+    document.getElementById('cookieResp').innerText = `Cookie Deleted: ${value}`;
+}
+
 function sectionTwoOut() {
 
     let status = validateForm();

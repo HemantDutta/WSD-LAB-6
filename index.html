@@ -82,11 +82,14 @@
         <div class="cMan mt-4">
             <h4 class="text-light">Remove Cookies</h4>
         </div>
-        <div class="rmBtns d-none d-flex justify-content-around mt-4" id="rmBtns">
-            <button class="btn btn-outline-light rounded-pill">Name</button>
-            <button class="btn btn-outline-light rounded-pill">Email</button>
-            <button class="btn btn-outline-light rounded-pill">Age</button>
-            <button class="btn btn-outline-light rounded-pill">Phone</button>
+        <div class="rmCSect d-flex flex-column">
+            <div class="rmBtns d-flex justify-content-around mt-4" id="rmBtns">
+                <button class="btn btn-outline-light rounded-pill" onclick="deleteCookie('name')">Name</button>
+                <button class="btn btn-outline-light rounded-pill" onclick="deleteCookie('email')">Email</button>
+                <button class="btn btn-outline-light rounded-pill" onclick="deleteCookie('age')">Age</button>
+                <button class="btn btn-outline-light rounded-pill" onclick="deleteCookie('phone')">Phone</button>
+            </div>
+            <span id="cookieResp" class="bg-light text-info mt-4 font-weight-bold rounded-pill p-3 d-none"></span>
         </div>
     </div>
     <div class="me text-center" id="footer">
