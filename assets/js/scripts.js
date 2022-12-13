@@ -194,12 +194,10 @@ function sectionTwoOut() {
     let status = validateForm();
     let btnResp = document.getElementById('btnResp');
     if (!status) {
-
         btnResp.classList.remove('text-success');
         btnResp.classList.add('text-danger');
         btnResp.innerText = "Please fill the form properly!";
     } else {
-
         btnResp.classList.remove('text-danger');
         btnResp.classList.add('text-success');
         btnResp.innerText = "Values: Valid";
@@ -246,7 +244,6 @@ function sectionThreeIn() {
         sect3.style.transform = "translateX(0%)";
     }, 200);
 
-    let imgSrc = localStorage.getItem('fileData');
     let name = getCookie('name');
     document.getElementById('name-sect').innerHTML = `<h3 class="text-light">${name}</h3>`;
 
